@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exceptionleta</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<div class="footer">Feito por ExceptionError</div>
+
+<body>
+  <header>
+    <h1>Exceptionleta</h1>
+  </header>
+
+  <div class="main">
+    <div class="wheel-container">
+      <div class="pointer"></div>
+      <canvas id="wheelCanvas" width="400" height="400"></canvas>
+    </div>
+
+    <div class="controls">
+      <textarea id="itemsInput" placeholder="Insira os itens"></textarea>
+      <button id="spinBtn" disabled>Sortear</button>
+    </div>
+  </div>
+
+  <!-- Modal de resultado -->
+  <div id="resultModal" class="modal">
+    <div class="modal-content">
+      <h2>Item Sorteado:</h2>
+      <p id="selectedItem"></p>
+      <div class="modal-actions">
+        <button id="removeAndSpin">Remover e sortear outro</button>
+        <button id="justSpin">Sortear outro</button>
+        <button id="closeModal">Fechar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- elementos de áudio -->
+  <audio id="tickSound" src="sounds/init.wav" preload="auto"></audio>
+  <audio id="winSound"  src="sounds/select.wav"  preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
